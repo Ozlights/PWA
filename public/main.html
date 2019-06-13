@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#00D1B2" />
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Progressive Web App - Tercera parcial</title>
+</head>
+
+<body class="site">
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+            Universidad de Mariana
+          </h1>
+                <h2 class="subtitle">
+            Facultad de Diegogo
+          </h2>
+            </div>
+        </div>
+    </section>
+    <br />
+    <main class="site2">
+        <div class="container">
+            <div id="dispE"></div>
+              <br>
+            <div class="field is-grouped is-grouped-right">
+                <p class="control">
+                    <a id="logout" class="button is-danger">
+            Log out
+          </a>
+                </p>
+            </div>
+
+            <div class="field">
+                <label class="label">Agregar alumno</label>
+                <div class="control">
+                    <input class="input" type="text" id="name" placeholder="Nombre" />
+                    <br />
+                    <br />
+                    <input class="input" type="text" id="surename" placeholder="Apellido" />
+                    <br />
+                </div>
+            </div>
+
+            <div class="control">
+                <button id="saveA" class="button is-primary" onclick="guardar()">
+                    Guardar
+                </button>
+            </div>
+
+            <br />
+
+            <table class="table is-striped is-narrow is-hoverable is-fullwidth">
+                <thead>
+                    <th><abbr id="Nombre">Nombre</abbr></th>
+                    <th><abbr id="Apellido">Apellido</abbr></th>
+                    <th><abbr id="Asistencia">Asistencia</abbr></th>
+                    <th><abbr id="Ajustes">Ajustes</abbr></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+    </main>
+    <br />
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Desarrollado</strong> por <a href="#">Diego Contreras</a>.
+            </p>
+        </div>
+    </footer>
+
+    <script defer src="main.js"></script>
+    <script defer src="app.js"></script>
+</body>
+
+</html>
